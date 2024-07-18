@@ -1,0 +1,27 @@
+﻿@model List<Actor>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Doctors</title>
+    <link href="~/css/actor.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+    <a asp-action="Create" asp-controller="Actor">Add Actor</a>
+    @foreach (var item in Model)
+    {
+        <div class="actor" style="margin-bottom:1rem;">
+            <img src="~/images/cast/@item.ProfilePicture" alt="Alternate Text" />
+            <h2>@item.FirstName  @item.LastName</h2>
+            <p>Bio: @item.Bio</p>
+            <a href="#" style="margin-right:1rem;">Social Media</a>
+        <a asp-action="Edit" asp-controller="Actor" asp-route-id="@item.Id">Edit</a>
+        <a asp-action="Delete" asp-controller="Actor" asp-route-id="@item.Id">Delete</a>
+        </div>
+        
+    }
+
+</body>
+</html>
+

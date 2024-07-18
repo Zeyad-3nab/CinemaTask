@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Movie>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Doctors</title>
+    <link href="~/css/movie.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center flex-wrap">
+        @foreach (var item in Model)
+        {
+            <div class="movie ">
+                <h4> @item.Name </h4>
+
+                <div class="movie_info d-flex ">
+                    <img src="~/images/movies/@item.ImgUrl" alt="Alternate Text" />
+                    <div class="movie_title">
+                        <p class="d-flex">Price: @item.Price</p>
+                        <p>Cinema: @item.Cinema.Name</p>
+                        <p>Start Date: @item.StartDate</p>
+                        <p>End Date: @item.EndDate</p>
+                        <p>Category: <a href="#">@item.Category.Name</a></p>
+                        @if (item.StartDate < DateTime.Now && item.EndDate > DateTime.Now)
+                        {
+                            item.MovieStatus = (MovieStatus)1;
+                        }
+                        else if (item.StartDate > DateTime.Now)
+                        {
+                            item.MovieStatus = (MovieStatus)0;
+                        }
+                        else
+                        {
+                            item.MovieStatus = (MovieStatus)2;
+
+                        }
+                        <button class="available btn-primary">@item.MovieStatus</button>
+                    </div>
+                </div>
+                <div class="ticket gap-2 d-flex justify-content-center align-items-center">
+                    <a class="more" asp-controller="Movie" asp-action="Details" asp-route-id="@item.Id">More Details</a>
+                    <a class="book" href="#">Book Ticket</a>
+                </div>
+
+
+            </div>
+        }
+    </div>
+
+</body>
+</html>
+

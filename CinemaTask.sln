@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaTask", "CinemaTask\CinemaTask.csproj", "{12256DDD-31EF-4B00-9240-83E582E88359}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12256DDD-31EF-4B00-9240-83E582E88359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12256DDD-31EF-4B00-9240-83E582E88359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12256DDD-31EF-4B00-9240-83E582E88359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12256DDD-31EF-4B00-9240-83E582E88359}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B16C7664-0AEB-4824-AB74-5957A51E9822}
+	EndGlobalSection
+EndGlobal

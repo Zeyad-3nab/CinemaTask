@@ -1,0 +1,72 @@
+﻿a {
+    text-decoration: none;
+}
+
+.movie {
+    width: 90%;
+    margin: 1rem;
+    border: 1px solid darkgrey;
+}
+
+    .movie h4 {
+        background-color: gainsboro;
+        padding: .75rem 1.3rem;
+        border: 1px solid darkgrey;
+        margin-bottom: 0;
+    }
+
+.movie_info {
+    gap: .75rem;
+}
+
+    .movie_info img {
+        width: 35%;
+        height: 76vh;
+        border-radius: 5px;
+    }
+
+.movie_title {
+    margin-top: 1rem;
+}
+
+.available {
+    padding: .4rem .6rem;
+    border: none;
+    border-radius: 4px;
+}
+
+.ActorImage img {
+    width: 50px;
+    height: 50px;
+}
+
+.ticket {
+    padding: 1rem 0;
+}
+
+    .ticket a {
+        padding: .4rem 1rem;
+        border-radius: 4px;
+    }
+
+.more {
+    color: darkgrey;
+    border: darkgrey;
+}
+
+    .more:hover {
+        background-color: darkgrey;
+        color: #ffffff;
+        border: darkgrey;
+        transition: .5s;
+    }
+
+.book {
+    color: #ffffff;
+    background: rgba( 25, 135, 84);
+    border: rgba( 25, 135, 84);
+}
+
+    .book:hover {
+        color: #ffffff;
+    }

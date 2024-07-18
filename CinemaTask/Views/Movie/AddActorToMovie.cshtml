@@ -1,0 +1,46 @@
+﻿@model CinemaTask.Models.actorMovies
+
+@{
+    ViewData["Title"] = "AddActorToMovie";
+     var movie = ViewData["movie"] as CinemaTask.Models.Movie;
+    // SelectList actorsLists = new SelectList(ViewBag.actors, "Id", "FirstName");
+}
+<div class="d-flex align-items-center gap-2">
+<h1>AddActorTo: </h1>
+<h3>@movie.Name</h3>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddActorToMovie">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input type="hidden" asp-for="movieId"  value="@ViewBag.movie.Id">
+            </div>
+            <div class="form-group">
+                <label asp-for="actorId" class="control-label">Actor Name</label>
+             @*    <select class="form-control" asp-for="actorId" asp-items="actorsLists"></select> *@
+
+                 <select asp-for="actorId" class="form-control">
+                @foreach (var item in ViewBag.actors)
+                {
+                <option value="@item.Id">@item.FirstName  @item.LastName</option>
+
+                }
+
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
